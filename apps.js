@@ -8,23 +8,24 @@ function Emploee(id,name,department,level,imgURL) {
   function calc(level) {
     switch(level) {
      case "junior":
-     return console.log(math.round(math.random()*500+500));
+     return (Math.round(Math.random() * 500 + 500 ));
      break;
     
      case "mid-senior":
-     return console.log(math.round(math.random()*500+1000));
+     return (Math.round(Math.random()* 500 + 1000 ));
      break;
 
      case "senior":
-     return console.log(math.round(math.random()*500+1500));
+     return (Math.round(Math.random() * 500 + 1500 ));
      break;
     }
 
-    
-      this.info = function() {
+   }  
+
+      this.info = function(){
         return `i am ${this.fullname} my salary is ${this.salary}`;
     }
- }
+
 
 }
 
