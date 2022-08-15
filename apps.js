@@ -42,3 +42,54 @@ let emploees = [
 for(let i=0; i<emploees.length ;i++){
     console.log(emploees[i].info());
 }
+
+
+// ***********************************
+
+
+let main = document.querySelector("main");
+
+const Table= document.createElement("table");
+main.appendChild(Table);
+
+const Theader = document.createElement("thead");
+Table.appendChild(Theader);
+
+const Data1 = document.createElement("th");
+Theader.appendChild(Data1);
+Data1.textContent=" Emploee ID"
+
+const Data2 = document.createElement("th");
+Theader.appendChild(Data2);
+Data2.textContent="FullName"
+
+const Data3 = document.createElement("th");
+Theader.appendChild(Data3);
+Data3.textContent="Department"
+
+const Data4 = document.createElement("th");
+Theader.appendChild(Data4);
+Data4.textContent="Level"
+
+
+const Data5 = document.createElement("th");
+Theader.appendChild(Data5);
+Data5.textContent="salary"
+
+const arr110 = ["id","fullname","department","level", "salary"]
+
+for (let i = 0; i < emploees.length; i++) {
+    const emploeeRow = document.createElement("tr");
+    Table.appendChild(emploeeRow);
+   
+
+for (let s = 0; s < emploees.length; s++) {
+    // const element = array[i][arr10[s]];
+     const cell = document.createElement("td")
+    emploeeRow.appendChild(cell)
+    cell.textContent=emploees[i][arr110[s]]
+}
+    
+}
+
+
